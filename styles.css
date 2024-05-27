@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    justify-content: center; /* Center-align children vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added bottom margin for spacing */
+}
+
+input[type="file"], .custom-file-upload, textarea, input[type="number"], button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+input[type="file"], .custom-file-upload, button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.custom-file-upload {
+    background-color: #4CAF50; /* Green background */
+}
+
+.custom-file-upload:hover, button:hover {
+    background-color: #45a049; /* Darker green on hover for custom file upload */
+    background-color: #005f7f; /* Darker blue on hover for buttons */
+}
+
+textarea, input[type="number"] {
+    border: 1px solid #ccc; /* Consistent border styling */
+    width: 80%; /* Consistent width */
+    max-width: 300px; /* Maximum width */
+}
+
+#imagePreview {
+    width: auto; /* Width adjusts to the image */
+    max-width: 100%; /* Ensures it doesn't exceed the width of its container */
+    margin: 20px auto;
+    border: 1px solid #ccc; /* Added border for better visibility */
+    padding: 10px; /* Padding for inner spacing */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow of the image outside the preview area */
+}
+
+#imagePreview img {
+    max-width: 100%; /* Maximum width of the image is 100% of its container */
+    max-height: 80vh; /* Maximum height of the image is 80% of the viewport height */
+    height: auto; /* Height adjusts automatically */
+}
+
+#downloadButton {
+    display: none;
+}
+
+#downloadButton.visible {
+    display: inline-block;
+    margin-top: 20px; /* Added margin for spacing */
+}

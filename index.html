@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visible Watermarking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #imagePreview {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        #watermarkText, #positionX, #positionY {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Visible Watermarking</h2>
+    <input type="file" id="imageInput" accept="image/*">
+    <br>
+    <textarea id="watermarkText" placeholder="Enter watermark text"></textarea>
+    <br>
+    <label for="positionX">X Coordinate:</label>
+    <input type="number" id="positionX" value="50">
+    <br>
+    <label for="positionY">Y Coordinate:</label>
+    <input type="number" id="positionY" value="50">
+    <br>
+    <button onclick="addWatermark()">Add Watermark</button>
+    <div id="imagePreview"></div>
+    <button id="downloadButton">Download Watermarked Image</button>
+    <script src="script.js"></script>
+</body>
+</html>
